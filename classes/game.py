@@ -86,7 +86,6 @@ class Person:
         mp_rep = str(self.mp)+"/"+str(self.maxmp)
         hp_rep = " "*(11-len(hp_rep)) + hp_rep
         mp_rep = " "*(7-len(mp_rep)) + mp_rep
-        space_no = 20-len(self.name)
-        spaces = space_no*" "
+        spaces = (20-len(self.name))*" "
         print("                                   _________________________                   __________")
         print(bcolors.BOLD+self.name+" :"+spaces+hp_rep+bar_color+" |"+hp_bar+"|         "+bcolors.ENDC+bcolors.BOLD+mp_rep+bcolors.OKBLUE+" |"+mp_bar+"|"+bcolors.ENDC)

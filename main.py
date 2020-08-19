@@ -61,7 +61,7 @@ while running:
             players[enemy_target].takeDamage(enemy_dmg)
             print(bcolors.BOLD + bcolors.FAIL + enemy.name + " attacked "+players[enemy_target].name+" for", str(enemy_dmg) + bcolors.ENDC)
         elif enemy_choice == 1:
-            spell_choice = random.randrange(0,2)
+            spell_choice = random.randrange(0,len(enemy_spells))
             enemy_dmg = enemy_spells[spell_choice].generate_damage()
             enemy.reduce_mp(enemy_spells[spell_choice].cost)
             if enemy_spells[spell_choice].type == "black":
